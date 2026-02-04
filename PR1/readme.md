@@ -11,7 +11,7 @@
 
 <img width="655" height="165" alt="completed1_10" src="https://github.com/user-attachments/assets/e0dd18be-7fa2-4f3d-89e5-8152712a7a2f" />
 
-
 Скріншот виконання:
 <img width="521" height="152" alt="result1_10" src="https://github.com/user-attachments/assets/35fadb50-cb78-4680-ba6a-c0b007ee44d2" />
+
 
