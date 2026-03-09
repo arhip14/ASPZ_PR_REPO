@@ -179,8 +179,4 @@ gcc pr3_6.c -o pr3_6
 
 nano test_ulimit.sh
 chmod +x test_ulimit.sh
-<<<<<<< Updated upstream
 ./test_ulimit.sh
-=======
-./test_ulimit.sh
->>>>>>> Stashed changes
