@@ -1,7 +1,0 @@
-# misc
-.DS_Store
-*.pem
-*.o
-*.exe
-.env*
-/.vscode/
