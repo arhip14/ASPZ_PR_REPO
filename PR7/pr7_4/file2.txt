@@ -1,0 +1,24 @@
+Start of file2
+This is another file
+It has multiple lines
+To test the program
+We need more than 20 lines
+So that pagination works
+Line 7
+Line 8
+Line 9
+Line 10
+Line 11
+Line 12
+Line 13
+Line 14
+Line 15
+Line 16
+Line 17
+Line 18
+Line 19
+Line 20
+Line 21
+Line 22
+Line 23
+Line 24

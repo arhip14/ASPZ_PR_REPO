@@ -1,0 +1,9 @@
+Hello world
+This is a test file
+hello from C program
+Another line without keyword
+HELLO again (but in uppercase)
+Some random text
+hello 
+
+heloo hello 
