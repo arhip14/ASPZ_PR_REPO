@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/types.h>
+
+pid_t receiver_pid;
+
+void handler(int sig, siginfo_t *info, void *context) {
+    (void)sig;
+    (void)context;
+
+    printf("Отримано повідомлення: %d\n", info->si_value.sival_int);
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_sigaction = handler;
+    sa.sa_flags = SA_SIGINFO;
+    sigemptyset(&sa.sa_mask);
+
+    pid_t pid = fork();
+
+    if (pid < 0) {
+        perror("fork");
+        return 1;
+    }
+
+    if (pid == 0) {
+        receiver_pid = getpid();
+        printf("Receiver PID: %d\n", receiver_pid);
+
+        sigaction(SIGUSR1, &sa, NULL);
+
+        printf("Receiver чекає повідомлення...\n");
+
+        while (1) {
+            pause(); 
+        }
+    }
+
+    else {
+        sleep(1); 
+
+        printf("Sender починає надсилання...\n");
+
+        for (int i = 1; i <= 5; i++) {
+            union sigval value;
+            value.sival_int = i * 10;
+
+            sigqueue(pid, SIGUSR1, value);
+
+            printf("Відправлено: %d\n", value.sival_int);
+            sleep(1);
+        }
+    }
+
+    return 0;
+}
