@@ -36,7 +36,7 @@ void fill_random(int *arr, int n) {
 
 void test(const char *name, void (*fill)(int*, int), int n) {
     int *arr = malloc(n * sizeof(int));
-    if(!arr) return;
+    if (!arr) return;
 
     fill(arr, n);
 
@@ -71,4 +71,4 @@ int main() {
     test("Random", fill_random, n);
 
     return 0;
-}
+} 

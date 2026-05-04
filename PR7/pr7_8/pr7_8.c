@@ -16,7 +16,6 @@ int main() {
     char answer;
 
     while ((entry = readdir(dir)) != NULL) {
-        // пропускаємо "." та ".."
         if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0)
             continue;
 

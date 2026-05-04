@@ -27,4 +27,4 @@ for DIR in "${DIRS[@]}"; do
 done
 
 echo "${SEP}"
-exit  0
+exit 0
